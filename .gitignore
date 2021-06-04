@@ -9,7 +9,7 @@ __pycache__/
 *.so
 
 # files
-rain.csv
+.csv
 
 # Distribution / packaging
 .Python
