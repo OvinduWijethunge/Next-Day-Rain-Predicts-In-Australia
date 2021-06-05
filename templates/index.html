@@ -123,221 +123,217 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-custom-font u-text u-text-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Predict Tomorrow</h3>
         <div class="u-expanded-width u-form u-form-1">
-          <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
+          <form action="{{ url_for('predict') }}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
             <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-1">
-              <label for="date-d837" class="u-label">Date</label>
-              <input type="date" placeholder="MM/DD/YYYY" id="date-d837" name="date" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-1" required="">
+              <label for="date-d837" class="u-label" style="color:white;">Date</label>
+              <input type="date" placeholder="MM/DD/YYYY" id="date-d837" name="Date" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-1" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-2">
-              <label for="select-cc35" class="u-label">Location</label>
+              <label for="select-cc35" class="u-label" style="color:white;">Location</label>
               <div class="u-form-select-wrapper">
                 <select id="select-cc35" name="Location" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-2" required="required">
-                  <option value="Albury">Albury</option>
-                  <option value="BadgerysCreek">BadgerysCreek</option>
-                  <option value="Cobar">Cobar</option>
-                  <option value="CoffsHarbour">CoffsHarbour</option>
-                  <option value="Moree">Moree</option>
-                  <option value="Newcastle">Newcastle</option>
-                  <option value="NorahHead">NorahHead</option>
-                  <option value="NorfolkIsland">NorfolkIsland</option>
-                  <option value="Penrith">Penrith</option>
-                  <option value="Richmond">Richmond</option>
-                  <option value="Sydney">Sydney</option>
-                  <option value="SydneyAirport">SydneyAirport</option>
-                  <option value="WaggaWagga">WaggaWagga</option>
-                  <option value="Williamtown">Williamtown</option>
-                  <option value="Wollongong">Wollongong</option>
-                  <option value="Canberra">Canberra</option>
-                  <option value="Tuggeranong">Tuggeranong</option>
-                  <option value="MountGinini">MountGinini</option>
-                  <option value="Ballarat">Ballarat</option>
-                  <option value="Bendigo">Bendigo</option>
-                  <option value="Sale">Sale</option>
-                  <option value="MelbourneAirport">MelbourneAirport</option>
-                  <option value="Melbourne">Melbourne</option>
-                  <option value="Mildura">Mildura</option>
-                  <option value="Nhil">Nhil</option>
-                  <option value="Portland">Portland</option>
-                  <option value="Watsonia">Watsonia</option>
-                  <option value="Dartmoor">Dartmoor</option>
-                  <option value="Brisbane">Brisbane</option>
-                  <option value="Cairns">Cairns</option>
-                  <option value="GoldCoast">GoldCoast</option>
-                  <option value="Townsville">Townsville</option>
-                  <option value="Adelaide">Adelaide</option>
-                  <option value="MountGambier">MountGambier</option>
-                  <option value="Nuriootpa">Nuriootpa</option>
-                  <option value="Woomera">Woomera</option>
-                  <option value="Albany">Albany</option>
-                  <option value="Witchcliffe">Witchcliffe</option>
-                  <option value="PearceRAAF">PearceRAAF</option>
-                  <option value="PerthAirport">PerthAirport</option>
-                  <option value="Perth">Perth</option>
-                  <option value="SalmonGums">SalmonGums</option>
-                  <option value="Walpole">Walpole</option>
-                  <option value="Hobart">Hobart</option>
-                  <option value="Launceston">Launceston</option>
-                  <option value="AliceSprings">AliceSprings</option>
-                  <option value="Darwin">Darwin</option>
-                  <option value="Katherine">Katherine</option>
-                  <option value="Uluru">Uluru</option>
+                  <option value="24">Adelaide</option>
+				  <option value="42">Albany</option>
+				  <option value="22">Albury</option>
+				  <option value="2">AliceSprings</option>
+                  <option value="17">BadgerysCreek</option>
+				  <option value="34">Ballarat</option>
+                  <option value="13">Bendigo</option>
+				  <option value="26">Brisbane</option>
+				  <option value="46">Cairns</option>
+				  <option value="12">Canberra</option>
+                  <option value="4">Cobar</option>
+                  <option value="40">CoffsHarbour</option>
+                  <option value="37">Darwin</option>
+                  <option value="45">Dartmoor</option>
+                  <option value="33">GoldCoast</option>
+                  <option value="30">Hobart</option>
+                  <option value="9">Katherine</option>
+                  <option value="27">Launceston</option>
+                  <option value="20">Melbourne</option>
+                  <option value="3">Mildura</option>
+                  <option value="43">MountGambier</option>
+                  <option value="5">Moree</option>
+                  <option value="25">MelbourneAirport</option>
+                  <option value="39">MountGinini</option>
+                  <option value="31">Newcastle</option>
+                  <option value="38">NorahHead</option>
+                  <option value="44">NorfolkIsland</option>
+                  <option value="19">Nuriootpa</option>
+                  <option value="6">Nhil</option>
+                  <option value="18">Penrith</option>
+                  <option value="8">PearceRAAF</option>
+                  <option value="16">PerthAirport</option>
+                  <option value="21">Perth</option>
+                  <option value="48">Portland</option>
+                  <option value="14">Richmond</option>
+                  <option value="36">Sydney</option>
+                  <option value="7">SalmonGums</option>
+                  <option value="23">Sale</option>
+                  <option value="35">SydneyAirport</option>
+                  <option value="15">Tuggeranong</option>
+                  <option value="10">Townsville</option>
+                  <option value="1">Uluru</option>
+                  <option value="11">WaggaWagga</option>
+                  <option value="28">Williamtown</option>
+                  <option value="29">Wollongong</option>
+                  <option value="32">Watsonia</option>
+                  <option value="0">Woomera</option>
+                  <option value="41">Witchcliffe</option>
+                  <option value="47">Walpole</option>
                 </select>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-3">
-              <label for="text-4ff2" class="u-label">Minimum temprature</label>
-              <input type="text" placeholder="Centigrade" id="text-4ff2" name="Minimum_temprature" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-3" required="required">
+              <label for="text-4ff2" class="u-label" style="color:white;">Minimum temprature</label>
+              <input type="text" placeholder="Celsius" id="text-4ff2" name="Minimum_temprature" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-3" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-4">
-              <label for="text-66e8" class="u-label">Maximum Temperature</label>
-              <input type="text" placeholder="Centigrade" id="text-66e8" name="Maximum_Temperature" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-4" required="required">
+              <label for="text-66e8" class="u-label" style="color:white;">Maximum Temperature</label>
+              <input type="text" placeholder="Celsius" id="text-66e8" name="Maximum_Temperature" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-4" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-5">
-              <label for="text-1bd5" class="u-label">Evaporation</label>
-              <input type="text" placeholder="Evaporation" id="text-1bd5" name="Evaporation" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-5" required="required">
+              <label for="text-1bd5" class="u-label" style="color:white;">Evaporation</label>
+              <input type="text" placeholder="Millimetre" id="text-1bd5" name="Evaporation" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-5" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-6">
-              <label for="text-a37e" class="u-label">Rainfall</label>
-              <input type="text" placeholder="Rainfall" id="text-a37e" name="Rainfall" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-6" required="required">
+              <label for="text-a37e" class="u-label" style="color:white;">Rainfall</label>
+              <input type="text" placeholder="Millimetre" id="text-a37e" name="Rainfall" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-6" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-7">
-              <label for="text-023c" class="u-label">Wind Gust Speed</label>
-              <input type="text" placeholder="Wind Gust Speed" id="text-023c" name="Wind_Gust_Speed" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-7" required="required">
+              <label for="text-023c" class="u-label" style="color:white;">Wind Gust Speed</label>
+              <input type="text" placeholder="Speed (km/h)" id="text-023c" name="Wind_Gust_Speed" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-7" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-8">
-              <label for="text-13dc" class="u-label">Sunshine</label>
-              <input type="text" placeholder="Sunshine" id="text-13dc" name="Sunshine" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-8" required="required">
+              <label for="text-13dc" class="u-label" style="color:white;">Sunshine</label>
+              <input type="text" placeholder="Number of hours " id="text-13dc" name="Sunshine" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-8" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-9">
-              <label for="text-a5e5" class="u-label">Wind Speed 9am</label>
-              <input type="text" placeholder="Wind Speed 9am" id="text-a5e5" name="Wind_Speed_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-9" required="required">
+              <label for="text-a5e5" class="u-label" style="color:white;">Wind Speed 9am</label>
+              <input type="text" placeholder="Speed (km/h)" id="text-a5e5" name="Wind_Speed_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-9" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-10">
-              <label for="text-22ac" class="u-label">Wind Speed 3pm</label>
-              <input type="text" placeholder="Wind Speed 3pm" id="text-22ac" name="Wind_Speed_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-10" required="required">
+              <label for="text-22ac" class="u-label" style="color:white;">Wind Speed 3pm</label>
+              <input type="text" placeholder="Speed (km/h)" id="text-22ac" name="Wind_Speed_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-10" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-11">
-              <label for="text-815c" class="u-label">Humidity 9am</label>
-              <input type="text" placeholder="Humidity 9am" id="text-815c" name="Humidity_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-11" required="required">
+              <label for="text-815c" class="u-label" style="color:white;">Humidity 9am</label>
+              <input type="text" placeholder="Humidity percentage" id="text-815c" name="Humidity_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-11" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-12">
-              <label for="text-b753" class="u-label">Humidity 3pm</label>
-              <input type="text" placeholder="Humidity 3pm" id="text-b753" name="Humidity_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-12" required="required">
+              <label for="text-b753" class="u-label" style="color:white;">Humidity 3pm</label>
+              <input type="text" placeholder="Humidity percentage" id="text-b753" name="Humidity_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-12" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-13">
-              <label for="text-23ab" class="u-label">Pressure 9am</label>
-              <input type="text" placeholder="Pressure 9am" id="text-23ab" name="Pressure_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-13" required="required">
+              <label for="text-23ab" class="u-label" style="color:white;">Pressure 9am</label>
+              <input type="text" placeholder="Atmospheric pressure (hpa)" id="text-23ab" name="Pressure_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-13" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-14">
-              <label for="text-ae3a" class="u-label">Pressure 3pm</label>
-              <input type="text" placeholder="Pressure 3pm" id="text-ae3a" name="Pressure_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-14" required="required">
+              <label for="text-ae3a" class="u-label" style="color:white;">Pressure 3pm</label>
+              <input type="text" placeholder="Atmospheric pressure (hpa)" id="text-ae3a" name="Pressure_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-14" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-15">
-              <label for="text-9e28" class="u-label">Temperature 9am</label>
-              <input type="text" placeholder="Temperature 9am" id="text-9e28" name="Temperature_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-15">
+              <label for="text-9e28" class="u-label" style="color:white;">Temperature 9am</label>
+              <input type="text" placeholder="Celsius" id="text-9e28" name="Temperature_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-15">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-16">
-              <label for="text-1947" class="u-label">Temperature 3pm</label>
-              <input type="text" placeholder="Temperature 3pm" id="text-1947" name="Temperature_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-16" required="required">
+              <label for="text-1947" class="u-label" style="color:white;">Temperature 3pm</label>
+              <input type="text" placeholder="Celsius" id="text-1947" name="Temperature_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-16" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-17">
-              <label for="text-58be" class="u-label">Cloud 9am</label>
-              <input type="text" placeholder="Cloud 9am" id="text-58be" name="Cloud_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-17" required="required">
+              <label for="text-58be" class="u-label" style="color:white;">Cloud 9am</label>
+              <input type="text" placeholder="Fraction of sky obscured (Octas)" id="text-58be" name="Cloud_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-17" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-18">
-              <label for="text-5ccd" class="u-label">Cloud 3pm</label>
-              <input type="text" placeholder="Cloud 3pm" id="text-5ccd" name="Cloud_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-18" required="required">
+              <label for="text-5ccd" class="u-label" style="color:white;">Cloud 3pm</label>
+              <input type="text" placeholder="Fraction of sky obscured (Octas)" id="text-5ccd" name="Cloud_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-18" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-19">
-              <label for="select-fb45" class="u-label">Wind Direction at 3pm</label>
+              <label for="select-fb45" class="u-label" style="color:white;">Wind Direction at 3pm</label>
               <div class="u-form-select-wrapper">
                 <select id="select-fb45" name="Wind_Direction_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-19" required="required">
-                  <option value="W">W</option>
-                  <option value="NNW">NNW</option>
-                  <option value="SE">SE</option>
-                  <option value="ENE">ENE</option>
-                  <option value="SW">SW</option>
-                  <option value="SSE">SSE</option>
-                  <option value="S">S</option>
-                  <option value="NE">NE</option>
-                  <option value="N">N</option>
-                  <option value="SSW">SSW</option>
-                  <option value="WSW">WSW</option>
-                  <option value="ESE">ESE</option>
-                  <option value="E">E</option>
-                  <option value="NW">NW</option>
-                  <option value="WNW">WNW</option>
-                  <option value="NNE">NNE</option>
+                  <option value="0">W</option>
+                  <option value="4">NNW</option>
+                  <option value="12">SE</option>
+                  <option value="8">ENE</option>
+                  <option value="7">SW</option>
+                  <option value="9">SSE</option>
+                  <option value="10">S</option>
+                  <option value="3">NE</option>
+                  <option value="5">N</option>
+                  <option value="15">SSW</option>
+                  <option value="2">WSW</option>
+                  <option value="13">ESE</option>
+                  <option value="14">E</option>
+                  <option value="11">NW</option>
+                  <option value="1">WNW</option>
+                  <option value="6">NNE</option>
                 </select>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-20">
-              <label for="select-0356" class="u-label">Wind Direction at 9am</label>
+              <label for="select-0356" class="u-label" style="color:white;">Wind Direction at 9am</label>
               <div class="u-form-select-wrapper">
                 <select id="select-0356" name="Wind_Direction_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-20" required="required">
-                  <option value="W">W</option>
-                  <option value="NNW">NNW</option>
-                  <option value="SE">SE</option>
-                  <option value="ENE">ENE</option>
-                  <option value="SW">SW</option>
-                  <option value="SSE">SSE</option>
-                  <option value="S">S</option>
-                  <option value="NE">NE</option>
-                  <option value="N">N</option>
-                  <option value="SSW">SSW</option>
-                  <option value="WSW">WSW</option>
-                  <option value="ESE">ESE</option>
-                  <option value="E">E</option>
-                  <option value="NW">NW</option>
-                  <option value="WNW">WNW</option>
-                  <option value="NNE">NNE</option>
+                  <option value="0">W</option>
+                  <option value="4">NNW</option>
+                  <option value="12">SE</option>
+                  <option value="8">ENE</option>
+                  <option value="7">SW</option>
+                  <option value="9">SSE</option>
+                  <option value="10">S</option>
+                  <option value="3">NE</option>
+                  <option value="5">N</option>
+                  <option value="15">SSW</option>
+                  <option value="2">WSW</option>
+                  <option value="13">ESE</option>
+                  <option value="14">E</option>
+                  <option value="11">NW</option>
+                  <option value="1">WNW</option>
+                  <option value="6">NNE</option>
                 </select>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-21">
-              <label for="select-b339" class="u-label">Wind Gust Direction</label>
+              <label for="select-b339" class="u-label" style="color:white;">Wind Gust Direction</label>
               <div class="u-form-select-wrapper">
                 <select id="select-b339" name="Wind_Gust_Direction" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-21" required="required">
-                  <option value="W">W</option>
-                  <option value="NNW">NNW</option>
-                  <option value="SE">SE</option>
-                  <option value="ENE">ENE</option>
-                  <option value="SW">SW</option>
-                  <option value="SSE">SSE</option>
-                  <option value="S">S</option>
-                  <option value="NE">NE</option>
-                  <option value="N">N</option>
-                  <option value="SSW">SSW</option>
-                  <option value="WSW">WSW</option>
-                  <option value="ESE">ESE</option>
-                  <option value="E">E</option>
-                  <option value="NW">NW</option>
-                  <option value="WNW">WNW</option>
-                  <option value="NNE">NNE</option>
+                  <option value="0">W</option>
+                  <option value="4">NNW</option>
+                  <option value="12">SE</option>
+                  <option value="8">ENE</option>
+                  <option value="7">SW</option>
+                  <option value="9">SSE</option>
+                  <option value="10">S</option>
+                  <option value="3">NE</option>
+                  <option value="5">N</option>
+                  <option value="15">SSW</option>
+                  <option value="2">WSW</option>
+                  <option value="13">ESE</option>
+                  <option value="14">E</option>
+                  <option value="11">NW</option>
+                  <option value="1">WNW</option>
+                  <option value="6">NNE</option>
                 </select>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-22">
-              <label for="select-878b" class="u-label">Is Rain Today</label>
+              <label for="select-878b" class="u-label" style="color:white;">Is Rain Today</label>
               <div class="u-form-select-wrapper">
                 <select id="select-878b" name="Rain_Today" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-22" required="required">
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
                 </select>
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-border-1 u-border-black u-btn u-btn-submit u-button-style u-hover-palette-4-base u-palette-1-base u-text-black u-text-hover-white u-btn-1">Submit</a>
+              <a href="#" class="u-border-1 u-border-black u-btn u-btn-submit u-button-style u-hover-palette-4-base u-palette-1-base u-text-black u-text-hover-white u-btn-1">Predict..</a>
               <input type="submit" value="submit" class="u-form-control-hidden">
-            </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-            <input type="hidden" value="" name="recaptchaResponse">
           </form>
         </div>
         <h3 class="u-align-center u-custom-font u-text u-text-2" data-animation-name="flash" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Tomorrow is a ,&nbsp;</h3>
