@@ -39,7 +39,7 @@ Heroku: _https://kangaroo-rain.herokuapp.com/_</H4>
 • Outliers were handled using  Tukey method (IQR). <br>
 • Feature transformation was done by using severl methods such as log, boxcox, reciporal, square root transformation. <br>
 • Data visualization were done by using matplotlib and seborn. <br>
-• Imbalanced Dataset was handled using SMOTE. <br>
+• Imbalanced Dataset was handled using RandomOverSampler (I reccomand for use SMOTE also). <br>
 
 
 ### If you are willing to check project in flask 
