@@ -33,7 +33,6 @@ Pygments==2.7.4
 pynndescent==0.5.2
 python-dateutil==2.8.1
 pytz==2021.1
-pywin32==300
 pyzmq==22.0.2
 requests==2.25.1
 scikit-learn==0.24.2
