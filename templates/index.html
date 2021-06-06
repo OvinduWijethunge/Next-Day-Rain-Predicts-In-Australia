@@ -32,9 +32,28 @@
     <meta name="theme-color" content="#478ac9">
     <link rel="canonical" href="index.html">
     <meta property="og:url" content="index.html">
+	
+	
+	<style>
+	
+	.column {
+  float: left;
+  width: 50%;
+  padding:0 120px;
+  
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+}
+
+	
+	</style>
   </head>
   <body data-home-page="index.html" data-home-page-title="index" class="u-body u-overlap u-overlap-contrast u-overlap-transparent"><header class="u-clearfix u-header u-image u-header" id="sec-3ee2" data-image-width="1600" data-image-height="1060"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="index.html" class="u-align-center u-image u-image-round u-logo u-radius-19 u-image-1" data-image-width="512" data-image-height="512">
+        <a href="/" class="u-align-center u-image u-image-round u-logo u-radius-19 u-image-1" data-image-width="512" data-image-height="512">
           <img src="../static/images/australia.png" class="u-logo-image u-logo-image-1" data-image-width="62.4">
         </a>
         <nav data-position="menu" class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
@@ -47,7 +66,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-80 u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-3-base" href="index.html" style="padding: 20px 18px;">Home</a>
+            <ul class="u-nav u-spacing-20 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-80 u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-3-base" href="/" style="padding: 20px 18px;">Home</a>
 </li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-80 u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-3-base" href="Home.html#carousel_8f65" data-page-id="362307182" style="padding: 20px 18px;">About</a>
 </li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-80 u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-3-base" href="Home.html#sec-a25a" data-page-id="362307182" style="padding: 20px 18px;">Predict</a>
 </li><li class="u-nav-item"><a class="u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-hover-grey-80 u-nav-link u-text-active-white u-text-body-alt-color u-text-hover-palette-3-base" href="Home.html#carousel_a443" style="padding: 20px 18px;">Developer</a>
@@ -57,7 +76,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 28px;">Home</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/" style="padding: 10px 28px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#carousel_8f65" data-page-id="362307182" style="padding: 10px 28px;">About</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#sec-a25a" data-page-id="362307182" style="padding: 10px 28px;">Predict</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html#carousel_a443" style="padding: 10px 28px;">Developer</a>
@@ -119,16 +138,113 @@
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-image u-section-3" id="sec-a25a" data-image-width="1600" data-image-height="900">
+    <section class="u-clearfix u-image u-section-3" id="sec-a25a" data-image-width="1600" data-image-height="600">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h3 class="u-align-center u-custom-font u-text u-text-1" data-animation-name="slideIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">Predict Tomorrow</h3>
         <div class="u-expanded-width u-form u-form-1">
-          <form action="{{ url_for('predict') }}" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
-            <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-1">
+          <form action="{{ url_for('predict') }}" method="POST"  style="padding: 10px" >
+            
+			
+			
+			<div class="row">
+  <div class="column">
+  
+           <div class="u-form-date u-form-group u-form-partition-factor-2 u-form-group-1">
               <label for="date-d837" class="u-label" style="color:white;">Date</label>
               <input type="date" placeholder="MM/DD/YYYY" id="date-d837" name="Date" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-1" required="required">
             </div>
+            
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-3">
+              <label for="text-4ff2" class="u-label" style="color:white;">Minimum temprature</label>
+              <input type="text" placeholder="Celsius" id="text-4ff2" name="Minimum_temprature" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-3" required="required">
+            </div>
+            
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-5">
+              <label for="text-1bd5" class="u-label" style="color:white;">Evaporation</label>
+              <input type="text" placeholder="Millimetre" id="text-1bd5" name="Evaporation" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-5" required="required">
+            </div>
+            
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-7">
+              <label for="text-023c" class="u-label" style="color:white;">Wind Gust Speed</label>
+              <input type="text" placeholder="Speed (km/h)" id="text-023c" name="Wind_Gust_Speed" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-7" required="required">
+            </div>
+            
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-9">
+              <label for="text-a5e5" class="u-label" style="color:white;">Wind Speed 9am</label>
+              <input type="text" placeholder="Speed (km/h)" id="text-a5e5" name="Wind_Speed_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-9" required="required">
+            </div>
+           
+            <div class="u-form-group u-form-partition-factor-2 u-form-group-11">
+              <label for="text-815c" class="u-label" style="color:white;">Humidity 9am</label>
+              <input type="text" placeholder="Humidity percentage" id="text-815c" name="Humidity_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-11" required="required">
+            </div>
+			<div class="u-form-group u-form-partition-factor-2 u-form-group-13">
+              <label for="text-23ab" class="u-label" style="color:white;">Pressure 9am</label>
+              <input type="text" placeholder="Atmospheric pressure (hpa)" id="text-23ab" name="Pressure_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-13" required="required">
+            </div>
+			<div class="u-form-group u-form-partition-factor-2 u-form-group-15">
+              <label for="text-9e28" class="u-label" style="color:white;">Temperature 9am</label>
+              <input type="text" placeholder="Celsius" id="text-9e28" name="Temperature_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-15">
+            </div>
+			<div class="u-form-group u-form-partition-factor-2 u-form-group-17">
+              <label for="text-58be" class="u-label" style="color:white;">Cloud 9am</label>
+              <input type="text" placeholder="Fraction of sky obscured (Octas)" id="text-58be" name="Cloud_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-17" required="required">
+            </div>
+            <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-20">
+              <label for="select-0356" class="u-label" style="color:white;">Wind Direction at 9am</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-0356" name="Wind_Direction_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-20" required="required">
+                  <option value="0">W</option>
+                  <option value="4">NNW</option>
+                  <option value="12">SE</option>
+                  <option value="8">ENE</option>
+                  <option value="7">SW</option>
+                  <option value="9">SSE</option>
+                  <option value="10">S</option>
+                  <option value="3">NE</option>
+                  <option value="5">N</option>
+                  <option value="15">SSW</option>
+                  <option value="2">WSW</option>
+                  <option value="13">ESE</option>
+                  <option value="14">E</option>
+                  <option value="11">NW</option>
+                  <option value="1">WNW</option>
+                  <option value="6">NNE</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+              </div>
+            </div>
+			<div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-21">
+              <label for="select-b339" class="u-label" style="color:white;">Wind Gust Direction</label>
+              <div class="u-form-select-wrapper">
+                <select id="select-b339" name="Wind_Gust_Direction" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-21" required="required">
+                  <option value="0">W</option>
+                  <option value="4">NNW</option>
+                  <option value="12">SE</option>
+                  <option value="8">ENE</option>
+                  <option value="7">SW</option>
+                  <option value="9">SSE</option>
+                  <option value="10">S</option>
+                  <option value="3">NE</option>
+                  <option value="5">N</option>
+                  <option value="15">SSW</option>
+                  <option value="2">WSW</option>
+                  <option value="13">ESE</option>
+                  <option value="14">E</option>
+                  <option value="11">NW</option>
+                  <option value="1">WNW</option>
+                  <option value="6">NNE</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+              </div>
+            </div>
+  
+  </div>
+
+  <div class="column">
+  
             <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-2">
+			
               <label for="select-cc35" class="u-label" style="color:white;">Location</label>
               <div class="u-form-select-wrapper">
                 <select id="select-cc35" name="Location" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-2" required="required">
@@ -185,66 +301,38 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-3">
-              <label for="text-4ff2" class="u-label" style="color:white;">Minimum temprature</label>
-              <input type="text" placeholder="Celsius" id="text-4ff2" name="Minimum_temprature" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-3" required="required">
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-4">
+			<div class="u-form-group u-form-partition-factor-2 u-form-group-4">
               <label for="text-66e8" class="u-label" style="color:white;">Maximum Temperature</label>
               <input type="text" placeholder="Celsius" id="text-66e8" name="Maximum_Temperature" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-4" required="required">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-5">
-              <label for="text-1bd5" class="u-label" style="color:white;">Evaporation</label>
-              <input type="text" placeholder="Millimetre" id="text-1bd5" name="Evaporation" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-5" required="required">
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-6">
+			<div class="u-form-group u-form-partition-factor-2 u-form-group-6">
               <label for="text-a37e" class="u-label" style="color:white;">Rainfall</label>
               <input type="text" placeholder="Millimetre" id="text-a37e" name="Rainfall" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-6" required="required">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-7">
-              <label for="text-023c" class="u-label" style="color:white;">Wind Gust Speed</label>
-              <input type="text" placeholder="Speed (km/h)" id="text-023c" name="Wind_Gust_Speed" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-7" required="required">
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-8">
+			<div class="u-form-group u-form-partition-factor-2 u-form-group-8">
               <label for="text-13dc" class="u-label" style="color:white;">Sunshine</label>
               <input type="text" placeholder="Number of hours " id="text-13dc" name="Sunshine" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-8" required="required">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-9">
-              <label for="text-a5e5" class="u-label" style="color:white;">Wind Speed 9am</label>
-              <input type="text" placeholder="Speed (km/h)" id="text-a5e5" name="Wind_Speed_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-9" required="required">
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-10">
+			 <div class="u-form-group u-form-partition-factor-2 u-form-group-10">
               <label for="text-22ac" class="u-label" style="color:white;">Wind Speed 3pm</label>
               <input type="text" placeholder="Speed (km/h)" id="text-22ac" name="Wind_Speed_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-10" required="required">
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-11">
-              <label for="text-815c" class="u-label" style="color:white;">Humidity 9am</label>
-              <input type="text" placeholder="Humidity percentage" id="text-815c" name="Humidity_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-11" required="required">
             </div>
             <div class="u-form-group u-form-partition-factor-2 u-form-group-12">
               <label for="text-b753" class="u-label" style="color:white;">Humidity 3pm</label>
               <input type="text" placeholder="Humidity percentage" id="text-b753" name="Humidity_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-12" required="required">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-13">
-              <label for="text-23ab" class="u-label" style="color:white;">Pressure 9am</label>
-              <input type="text" placeholder="Atmospheric pressure (hpa)" id="text-23ab" name="Pressure_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-13" required="required">
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-14">
+            
+  
+          <div class="u-form-group u-form-partition-factor-2 u-form-group-14">
               <label for="text-ae3a" class="u-label" style="color:white;">Pressure 3pm</label>
               <input type="text" placeholder="Atmospheric pressure (hpa)" id="text-ae3a" name="Pressure_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-14" required="required">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-15">
-              <label for="text-9e28" class="u-label" style="color:white;">Temperature 9am</label>
-              <input type="text" placeholder="Celsius" id="text-9e28" name="Temperature_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-15">
-            </div>
+            
             <div class="u-form-group u-form-partition-factor-2 u-form-group-16">
               <label for="text-1947" class="u-label" style="color:white;">Temperature 3pm</label>
               <input type="text" placeholder="Celsius" id="text-1947" name="Temperature_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-16" required="required">
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-group-17">
-              <label for="text-58be" class="u-label" style="color:white;">Cloud 9am</label>
-              <input type="text" placeholder="Fraction of sky obscured (Octas)" id="text-58be" name="Cloud_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-17" required="required">
-            </div>
+            
             <div class="u-form-group u-form-partition-factor-2 u-form-group-18">
               <label for="text-5ccd" class="u-label" style="color:white;">Cloud 3pm</label>
               <input type="text" placeholder="Fraction of sky obscured (Octas)" id="text-5ccd" name="Cloud_3pm" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-18" required="required">
@@ -273,54 +361,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-20">
-              <label for="select-0356" class="u-label" style="color:white;">Wind Direction at 9am</label>
-              <div class="u-form-select-wrapper">
-                <select id="select-0356" name="Wind_Direction_9am" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-20" required="required">
-                  <option value="0">W</option>
-                  <option value="4">NNW</option>
-                  <option value="12">SE</option>
-                  <option value="8">ENE</option>
-                  <option value="7">SW</option>
-                  <option value="9">SSE</option>
-                  <option value="10">S</option>
-                  <option value="3">NE</option>
-                  <option value="5">N</option>
-                  <option value="15">SSW</option>
-                  <option value="2">WSW</option>
-                  <option value="13">ESE</option>
-                  <option value="14">E</option>
-                  <option value="11">NW</option>
-                  <option value="1">WNW</option>
-                  <option value="6">NNE</option>
-                </select>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
-              </div>
-            </div>
-            <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-21">
-              <label for="select-b339" class="u-label" style="color:white;">Wind Gust Direction</label>
-              <div class="u-form-select-wrapper">
-                <select id="select-b339" name="Wind_Gust_Direction" class="u-border-1 u-border-grey-30 u-grey-15 u-input u-input-rectangle u-radius-40 u-input-21" required="required">
-                  <option value="0">W</option>
-                  <option value="4">NNW</option>
-                  <option value="12">SE</option>
-                  <option value="8">ENE</option>
-                  <option value="7">SW</option>
-                  <option value="9">SSE</option>
-                  <option value="10">S</option>
-                  <option value="3">NE</option>
-                  <option value="5">N</option>
-                  <option value="15">SSW</option>
-                  <option value="2">WSW</option>
-                  <option value="13">ESE</option>
-                  <option value="14">E</option>
-                  <option value="11">NW</option>
-                  <option value="1">WNW</option>
-                  <option value="6">NNE</option>
-                </select>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
-              </div>
-            </div>
+            
+            
             <div class="u-form-group u-form-partition-factor-2 u-form-select u-form-group-22">
               <label for="select-878b" class="u-label" style="color:white;">Is Rain Today</label>
               <div class="u-form-select-wrapper">
@@ -331,12 +373,20 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
               </div>
             </div>
+  
+  </div>
+             </div>
+
+
+
+            
             <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-border-1 u-border-black u-btn u-btn-submit u-button-style u-hover-palette-4-base u-palette-1-base u-text-black u-text-hover-white u-btn-1">Predict..</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
+           <!--  <a href="predict" class="u-border-1 u-border-black u-btn u-btn-submit u-button-style u-hover-palette-4-base u-palette-1-base u-text-black u-text-hover-white u-btn-1">Predict..</a> 
+              <input type="submit" value="Predict_A" class="u-form-control-hidden"> -->
+			  <input type="submit" class="u-border-1 u-border-black u-btn u-btn-submit u-button-style u-hover-palette-4-base u-palette-1-base u-text-black u-text-hover-white u-btn-1" value="Predict!">
+			</div>  
           </form>
         </div>
-        <h3 class="u-align-center u-custom-font u-text u-text-2" data-animation-name="flash" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Tomorrow is a ,&nbsp;</h3>
       </div>
     </section>
     <section class="u-black u-clearfix u-section-4" id="carousel_a443">
@@ -391,7 +441,7 @@
               </div>
               <div class="u-align-center-sm u-align-right-md u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
                 <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <a href="index.html" class="u-image u-logo u-image-1" data-image-width="512" data-image-height="512">
+                  <a href="/" class="u-image u-logo u-image-1" data-image-width="512" data-image-height="512">
                     <img src="../static/images/australia.png" class="u-logo-image u-logo-image-1" data-image-width="104.037">
                   </a>
                 </div>

@@ -74,13 +74,16 @@ def predict():
         data = np.array([[location,minTemp,maxTemp,rainfall,evaporation,sunshine,windGustDir,windGustSpeed,winddDir9am,winddDir3pm,windSpeed9am,windSpeed3pm,humidity9am,humidity3pm,pressure9am,pressure3pm,cloud9am,cloud3pm,temp9am,temp3pm,rainToday,month,day]])
         my_prediction = classifier.predict(data)
         print(my_prediction)
-        result = ''
+        
         if my_prediction == 1:
             result = ' It is a Rainy aday'
         else:
             result = ' It is a sunny day'
         print(result)    
-        return render_template('index.html', prediction=result)
+        return render_template('results.html',pred=my_prediction)
+    #else:
+        #return "error"   
+
         
 if __name__ == '__main__':
     app.run(debug=True)

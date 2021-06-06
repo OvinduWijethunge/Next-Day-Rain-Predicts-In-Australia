@@ -33672,7 +33672,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 /*end-variables sitestylecss*/
 .u-header {
-  background-image: url("images/rain_rain.jpg");
+  background-image: url("images/RainBusBoatSanfranciscoCaliforniaUsaWallpaperBackground.jpg");
   background-position: 50% 50%;
 }
 
@@ -33745,7 +33745,6 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-footer .u-position-1 {
-  height: auto;
   min-height: 176px;
   margin: 40px 0 0 20px;
 }
@@ -33839,6 +33838,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-footer .u-position-1 {
     margin-left: 0;
+    height: auto;
   }
 
   .u-footer .u-image-1 {
