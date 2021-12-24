@@ -21,7 +21,7 @@
 it has over 100 000 data records with 23 columns.</H4>
 <br>
 <H4>You can see deployed model in heroku , use below link for reach to deployed model:<br />
-Heroku: _https://kangaroo-rain.herokuapp.com/_</H4>
+Heroku: https://kangaroo-rain.herokuapp.com/</H4>
 
 
 <hr>
